@@ -37,7 +37,7 @@ export class LiveFormDialogComponent implements OnInit {
     let newDate: moment.Moment = moment.utc(this.liveForm.value.liveDate).local();
     this.liveForm.value.liveDate = newDate.format("YYYY-MM-DD") + "T" + this.liveForm.value.liveTime;
     this.rest.postLives(this.liveForm.value).subscribe(result => {});
-    //this.dialogRef.close();
+    //this.dialogRef.close(); 
     //this.liveForm.reset();
     this.cancel();
 
